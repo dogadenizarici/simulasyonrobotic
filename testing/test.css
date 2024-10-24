@@ -1,0 +1,77 @@
+.scroll {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    overflow-y: hidden;
+}
+  
+  
+  
+/* The outermost element*/
+.header-wrapper {
+    overflow: hidden;
+    width:auto;
+    height:100vh;
+    text-align:center;
+}
+  
+.zoominheader {
+    width:100vh;
+    height:200px;
+    text-align:center;
+    background: url("/pictures/makine.png");
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    position: relative;
+    user-select: none;
+    animation: zoomin 10s ease-in infinite;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+  
+/* The innermost element*/
+.zoomoutheader {
+    width:400px;
+    height:200px;
+    text-align:center;
+    background: none;
+    -webkit-animation: zoomout 10s ease-in infinite;
+    animation: zoomout 10s ease-in infinite;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+  
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+@keyframes zoomin {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+} /*End of Zoom in Keyframes */
+  
+/* Zoom out Keyframes */
+@-webkit-keyframes zoomout {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.67);}
+    100% {transform: scale(1);}
+}
+@keyframes zoomout {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.67);}
+    100% {transform: scale(1);}
+}/*End of Zoom out Keyframes */
+  
+/*Style for the text*/
+.text{
+    color:red;
+    font-weight:bold; 
+}
+  
