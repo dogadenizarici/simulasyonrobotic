@@ -1,3 +1,7 @@
+/*
+Responsive: 320px x 480px
+*/
+
 /* 
 0 - KULLANILAN RENKLER
 */
@@ -167,6 +171,17 @@ header {
 
 .offer:active {
     background-color: var(--red-clicked-color);
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .offer {
+        width: 50px;
+        font-size: 10px;
+    }
 }
 
 /* 
